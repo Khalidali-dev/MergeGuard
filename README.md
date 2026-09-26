@@ -520,6 +520,14 @@ The entire project lifecycle was driven by IBM Bob 2.0 with zero manual boilerpl
 
 ---
 
+
+## 🌐 Live Production Links
+
+- **🚀 Live Dashboard**: [mergeguard-omega.vercel.app](https://mergeguard-omega.vercel.app)
+- **⚡ Backend API**: `https://backend-eta-navy-65.vercel.app`
+- **🩺 Health Status**: [Check Health](https://backend-eta-navy-65.vercel.app/health)
+
+---
 ## License
 
 MIT © 2026 MergeGuard Contributors
