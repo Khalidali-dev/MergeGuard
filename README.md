@@ -2,7 +2,7 @@
 
 # 🛡️ MergeGuard
 
-**AI-powered Pull Request Guardian that catches secrets, async bugs, and missing tests before they ship.**
+**AI-powered Pull Request Guardian that catches secrets, async bugs, and missing tests before they ship.** 
 
 [![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Vercel%20Production-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://mergeguard-omega.vercel.app)
 [![API Status](https://img.shields.io/badge/⚡%20API-Operational-3FB950?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://backend-eta-navy-65.vercel.app/health)
