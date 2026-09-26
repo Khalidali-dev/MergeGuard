@@ -268,7 +268,7 @@ MergeGuard/
 ### 1 · Clone
 
 ```bash
-git clone https://github.com/your-org/mergeguard.git
+git clone https://github.com/Khalidali-dev/MergeGuard.git
 cd mergeguard
 ```
 
@@ -492,4 +492,4 @@ The only human inputs were PR URL paste and feature requests — all code was wr
 
 ## License
 
-MIT © 2025 MergeGuard Contributors
+MIT © 2026 MergeGuard Contributors
