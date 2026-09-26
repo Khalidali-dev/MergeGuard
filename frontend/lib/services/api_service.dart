@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import '../models/analysis_result.dart';
 
 // ── Typed API exception ───────────────────────────────────────────────────────
@@ -32,7 +33,10 @@ class ApiException implements Exception {
 
 /// Singleton service that communicates with the MergeGuard backend.
 ///
-/// Base URL: http://localhost:5000
+/// Base URL configuration:
+/// - In development: defaults to `http://localhost:5001`
+/// - In production web: defaults to `''` (relative `/api/analyze-pr`)
+/// - In custom deployments: pass `--dart-define=API_BASE_URL=https://...`
 /// Endpoint: POST /api/analyze-pr
 class ApiService {
   ApiService._() {
@@ -41,7 +45,33 @@ class ApiService {
 
   static final ApiService instance = ApiService._();
 
-  static const String baseUrl = 'http://localhost:5001';
+  static const String _defaultDevUrl = 'http://localhost:5001';
+  static const String _envBaseUrl = String.fromEnvironment('API_BASE_URL');
+  static String? _overrideBaseUrl;
+
+  /// Dynamic Base URL:
+  /// 1. Uses runtime override if set via [setBaseUrl]
+  /// 2. Uses `--dart-define=API_BASE_URL=...` if provided at build time
+  /// 3. In Web Release mode, defaults to empty string `''` (relative `/api/...`)
+  /// 4. Defaults to `http://localhost:5001` for local development
+  static String get baseUrl {
+    if (_overrideBaseUrl != null) return _overrideBaseUrl!;
+    if (_envBaseUrl.isNotEmpty) return _envBaseUrl;
+    if (kReleaseMode && kIsWeb) {
+      return '';
+    }
+    return _defaultDevUrl;
+  }
+
+  /// Readable target name for timeout / connection error reporting.
+  static String get displayBaseUrl =>
+      baseUrl.isEmpty ? 'current host (/api)' : baseUrl;
+
+  /// Override the API URL at runtime (e.g., custom backend URL or testing).
+  static void setBaseUrl(String url) {
+    _overrideBaseUrl = url;
+    instance._dio.options.baseUrl = url;
+  }
 
   /// Maximum number of retries for transient network errors (not 4xx).
   static const int _maxRetries = 2;
@@ -157,12 +187,12 @@ class ApiService {
         ApiException(
           kind: ApiErrorKind.timeout,
           message:
-              'Request timed out. Is the backend running at $baseUrl?',
+              'Request timed out. Is the backend running at $displayBaseUrl?',
         ),
       DioExceptionType.connectionError => ApiException(
           kind: ApiErrorKind.noConnection,
           message:
-              'Cannot reach the backend at $baseUrl. '
+              'Cannot reach the backend at $displayBaseUrl. '
               'Make sure the server is running.',
         ),
       _ => ApiException(

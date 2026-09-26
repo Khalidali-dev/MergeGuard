@@ -11,7 +11,7 @@ void main() {
         child: const MergeGuardApp(),
       ),
     );
-    await tester.pump();
+    await tester.pumpAndSettle();
     // Top bar title
     expect(find.text('MergeGuard'), findsWidgets);
     // Idle hint
