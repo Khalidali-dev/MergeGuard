@@ -1,0 +1,16 @@
+node_modules
+**/node_modules
+frontend/.dart_tool
+frontend/.idea
+frontend/android
+frontend/ios
+frontend/linux
+frontend/macos
+frontend/windows
+frontend/test
+backend/__tests__
+backend/tests
+.git
+.env*
+!.env.example
+*.log

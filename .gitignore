@@ -48,3 +48,5 @@ __snapshots__/
 
 # Miscellaneous
 *.log
+.vercel
+.env*
