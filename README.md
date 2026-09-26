@@ -474,7 +474,7 @@ cp backend/.env.example backend/.env
 
 | Component | Target | Live URL | Status |
 |---|---|---|---|
-| **Frontend Dashboard** | Flutter Web (Wasm/CanvasKit) | **[web-kappa-wheat-59.vercel.app](https://web-kappa-wheat-59.vercel.app)** | ✅ Live |
+| **Frontend Dashboard** | Flutter Web (Wasm/CanvasKit) | **[mergeguard-omega.vercel.app](https://mergeguard-omega.vercel.app)** | ✅ Live |
 | **Backend API** | Node.js Express Serverless | **[backend-eta-navy-65.vercel.app](https://backend-eta-navy-65.vercel.app)** | ✅ Operational |
 | **Health Check** | API Health Endpoint | **[backend-eta-navy-65.vercel.app/health](https://backend-eta-navy-65.vercel.app/health)** | ✅ Status 200 OK |
 
@@ -517,15 +517,6 @@ The entire project lifecycle was driven by IBM Bob 2.0 with zero manual boilerpl
 - [ ] Historical score tracking — trend chart per repository
 - [ ] CI/CD integration — GitHub Action that blocks merge if `healthScore < threshold`
 - [ ] Custom rule authoring — YAML-defined secret patterns per organisation
-
----
-
-
-## 🌐 Live Production Links
-
-- **🚀 Live Dashboard**: [mergeguard-omega.vercel.app](https://mergeguard-omega.vercel.app)
-- **⚡ Backend API**: `https://backend-eta-navy-65.vercel.app`
-- **🩺 Health Status**: [Check Health](https://backend-eta-navy-65.vercel.app/health)
 
 ---
 ## License
