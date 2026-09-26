@@ -2,15 +2,23 @@
 
 # 🛡️ MergeGuard
 
-**AI-powered Pull Request analysis that catches secrets, async bugs, and missing tests before they ship.**
+**AI-powered Pull Request Guardian that catches secrets, async bugs, and missing tests before they ship.**
 
-[![Flutter](https://img.shields.io/badge/Flutter-3.47-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Vercel%20Production-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://web-kappa-wheat-59.vercel.app)
+[![API Status](https://img.shields.io/badge/⚡%20API-Operational-3FB950?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://backend-eta-navy-65.vercel.app/health)
+[![IBM Bob 2.0](https://img.shields.io/badge/🤖%20Agent-IBM%20Bob%202.0-0F62FE?style=for-the-badge&logo=ibm&logoColor=white)](https://www.ibm.com)
+
+<br/>
+
+[![Flutter](https://img.shields.io/badge/Flutter%20Web-3.47-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-3.13-0175C2?logo=dart&logoColor=white)](https://dart.dev)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white)](https://nodejs.org)
 [![Express](https://img.shields.io/badge/Express-4.19-000000?logo=express&logoColor=white)](https://expressjs.com)
 [![Tests](https://img.shields.io/badge/Tests-175%20passed-3FB950?logo=jest&logoColor=white)](#testing)
-[![IBM Bob](https://img.shields.io/badge/Built%20with-IBM%20Bob-0F62FE?logo=ibm&logoColor=white)](https://www.ibm.com)
+[![Vercel Serverless](https://img.shields.io/badge/Vercel-Serverless%20Functions-black?logo=vercel&logoColor=white)](https://backend-eta-navy-65.vercel.app/health)
 [![License](https://img.shields.io/badge/License-MIT-8B949E)](LICENSE)
+
+### 🌐 **[🚀 Launch Live Demo](https://web-kappa-wheat-59.vercel.app)** &nbsp;•&nbsp; 📡 **[Inspect API Health](https://backend-eta-navy-65.vercel.app/health)** &nbsp;•&nbsp; 📖 **[Features](#features)**
 
 </div>
 
@@ -63,17 +71,16 @@ Code review is the last line of defence before a change reaches production — b
             │
             ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                     IBM Bob Agent                               │
+│                     IBM Bob 2.0 Agent                           │
 │                                                                 │
-│   Scaffolded the full project end-to-end within a single        │
-│   conversation session:                                         │
+│   Autonomously scaffolded, debugged, and deployed end-to-end:   │
 │                                                                 │
-│   • Designed the monorepo layout and API contract              │
-│   • Implemented all backend services and analysis rules        │
-│   • Built every Flutter widget from models → screen            │
-│   • Wrote 175 unit + integration tests (100% pass rate)        │
-│   • Diagnosed and fixed all runtime issues (port conflicts,    │
-│     token length mismatches, widget overflow, etc.)            │
+│   • Designed the full-stack architecture & API contracts       │
+│   • Implemented backend rules engine & 175 Jest unit tests     │
+│   • Built complete Flutter Web dashboard & responsive UI        │
+│   • Configured Vercel Serverless Functions & SPA rewrites       │
+│   • Deployed production services live to Vercel via CLI        │
+│   • Cleaned Git index & repository configuration                │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -463,19 +470,42 @@ cp backend/.env.example backend/.env
 
 ---
 
-## IBM Bob Agent Workflow
+## ☁️ Live Cloud Deployment
 
-MergeGuard was scaffolded entirely within a single IBM Bob conversation session. The agent:
+| Component | Target | Live URL | Status |
+|---|---|---|---|
+| **Frontend Dashboard** | Flutter Web (Wasm/CanvasKit) | **[web-kappa-wheat-59.vercel.app](https://web-kappa-wheat-59.vercel.app)** | ✅ Live |
+| **Backend API** | Node.js Express Serverless | **[backend-eta-navy-65.vercel.app](https://backend-eta-navy-65.vercel.app)** | ✅ Operational |
+| **Health Check** | API Health Endpoint | **[backend-eta-navy-65.vercel.app/health](https://backend-eta-navy-65.vercel.app/health)** | ✅ Status 200 OK |
 
-1. **Designed** the monorepo layout, API contract, and JSON response schema
-2. **Implemented** the Node.js analysis engine with 10 secret rules, async detection, and test coverage heuristics
-3. **Built** the Flutter Web dashboard — every model, service, provider, and widget
-4. **Wrote** 175 unit and integration tests, ran them, diagnosed 5 initial failures (token length mismatch, wrong test expectations), and fixed all of them
-5. **Debugged** runtime issues: port conflicts (`EADDRINUSE`), Flutter `SearchBar` name collision, `withOpacity` deprecation warnings, `_CountBadge` unused class warning
-6. **Added** the mock mode endpoint and error dialog system
-7. **Improved** responsive layout: `PrInfoBar` overflow on narrow screens, stat card aspect ratio, section labels with staggered animations
+---
 
-The only human inputs were PR URL paste and feature requests — all code was written, tested, and verified by the agent.
+## 🤖 IBM Bob 2.0 Agent Workflow
+
+MergeGuard was conceived, designed, developed, tested, and deployed to production **autonomously using IBM Bob 2.0**:
+
+1. **Architecture & Contract Design**:
+   - Designed full-stack monorepo separation (`/backend` Express microservice + `/frontend` Flutter Web SPA).
+   - Formulated typed JSON schemas for diff analysis, health score deductions, and actionable remediation snippets.
+
+2. **Backend Engine & Security Implementation**:
+   - Built diff-parsing engine supporting unified diff hunks across JavaScript, TypeScript, and JSON files.
+   - Implemented 10 secret pattern detectors (AWS keys, GitHub PATs, Stripe live secrets, PEM private keys, Google API keys, etc.).
+   - Engineered AST/heuristic analysis for unhandled async operations and SQL injection vulnerabilities.
+   - Wrote 175 unit and integration tests across 3 Jest suites with a 100% pass rate.
+
+3. **Flutter Web Modern Dark UI**:
+   - Crafted a glassmorphic dashboard with animated circular health gauges, severity-coded issue cards, and one-click code copy.
+   - Added interactive mock demo mode enabling instant testing without requiring private GitHub tokens.
+
+4. **Vercel Serverless & Deployment Automation**:
+   - Wrapped Express into Vercel Serverless Function entry points (`backend/api/index.js` and `api/index.js`).
+   - Configured cross-origin resource sharing (CORS) with dynamic origin reflection and proxy headers.
+   - Implemented single-page application routing (`rewrites: [ { source: "/(.*)", destination: "/index.html" } ]`) and long-term asset caching headers.
+   - Automated Flutter Web release builds (`flutter build web --release`) and executed zero-downtime production deployment via Vercel CLI.
+   - Cleaned git index, created comprehensive `.gitignore`, and purged legacy tracked build artifacts.
+
+The entire project lifecycle was driven by IBM Bob 2.0 with zero manual boilerplate writing.
 
 ---
 

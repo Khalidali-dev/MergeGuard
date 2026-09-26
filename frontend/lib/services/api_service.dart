@@ -46,19 +46,20 @@ class ApiService {
   static final ApiService instance = ApiService._();
 
   static const String _defaultDevUrl = 'http://localhost:5001';
+  static const String _defaultProdUrl = 'https://backend-eta-navy-65.vercel.app';
   static const String _envBaseUrl = String.fromEnvironment('API_BASE_URL');
   static String? _overrideBaseUrl;
 
   /// Dynamic Base URL:
   /// 1. Uses runtime override if set via [setBaseUrl]
   /// 2. Uses `--dart-define=API_BASE_URL=...` if provided at build time
-  /// 3. In Web Release mode, defaults to empty string `''` (relative `/api/...`)
+  /// 3. In Web Release mode, defaults to the deployed production backend URL
   /// 4. Defaults to `http://localhost:5001` for local development
   static String get baseUrl {
     if (_overrideBaseUrl != null) return _overrideBaseUrl!;
     if (_envBaseUrl.isNotEmpty) return _envBaseUrl;
     if (kReleaseMode && kIsWeb) {
-      return '';
+      return _defaultProdUrl;
     }
     return _defaultDevUrl;
   }
