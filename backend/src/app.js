@@ -67,8 +67,9 @@ app.use('/api', analyzePrRouter);
 app.use('/', analyzePrRouter);
 
 // ── Health check ─────────────────────────────────────────────────────────────
-app.get('/health', (_req, res) => res.json({ status: 'ok', service: 'MergeGuard API' }));
-app.get('/api/health', (_req, res) => res.json({ status: 'ok', service: 'MergeGuard API' }));
+app.get(['/health', '/api/health', '/'], (_req, res) =>
+  res.json({ status: 'ok', service: 'MergeGuard API' })
+);
 
 // ── 404 handler ──────────────────────────────────────────────────────────────
 app.use((_req, res) => {

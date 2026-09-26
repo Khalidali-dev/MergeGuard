@@ -140,8 +140,8 @@ const analyzePrSchema = Joi.object({
     .messages({ 'any.required': 'prUrl is required' }),
 });
 
-// ── POST /api/analyze-pr ──────────────────────────────────────────────────────
-router.post('/analyze-pr', async (req, res, next) => {
+// ── POST /api/analyze-pr (or / when rewritten) ───────────────────────────────
+router.post(['/analyze-pr', '/'], async (req, res, next) => {
   // 1. Validate input
   const { error, value } = analyzePrSchema.validate(req.body, { abortEarly: false });
   if (error) {
