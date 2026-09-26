@@ -4,7 +4,7 @@
 
 **AI-powered Pull Request Guardian that catches secrets, async bugs, and missing tests before they ship.**
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Vercel%20Production-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://web-kappa-wheat-59.vercel.app)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Vercel%20Production-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://mergeguard-omega.vercel.app)
 [![API Status](https://img.shields.io/badge/⚡%20API-Operational-3FB950?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://backend-eta-navy-65.vercel.app/health)
 [![IBM Bob 2.0](https://img.shields.io/badge/🤖%20Agent-IBM%20Bob%202.0-0F62FE?style=for-the-badge&logo=ibm&logoColor=white)](https://www.ibm.com)
 
