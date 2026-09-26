@@ -18,7 +18,7 @@
 [![Vercel Serverless](https://img.shields.io/badge/Vercel-Serverless%20Functions-black?logo=vercel&logoColor=white)](https://backend-eta-navy-65.vercel.app/health)
 [![License](https://img.shields.io/badge/License-MIT-8B949E)](LICENSE)
 
-### 🌐 **[🚀 Launch Live Demo](https://web-kappa-wheat-59.vercel.app)** &nbsp;•&nbsp; 📡 **[Inspect API Health](https://backend-eta-navy-65.vercel.app/health)** &nbsp;•&nbsp; 📖 **[Features](#features)**
+### 🌐 **[🚀 Launch Live Demo](https://mergeguard-omega.vercel.app)** &nbsp;•&nbsp; 📡 **[Inspect API Health](https://backend-eta-navy-65.vercel.app/health)** &nbsp;•&nbsp; 📖 **[Features](#features)**
 
 </div>
 
